@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Single-cell RNA-Seq analysis"
+title: "Single-cell"
 description: ""
 group: navigation
 ---
