@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Getting Started (Bulk)"
+title: "Bulk"
 description: ""
 group: navigation
 ---
