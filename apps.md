@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Apps"
+title: "Applications"
 group: navigation
 ---
 
