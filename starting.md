@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Getting Started"
+title: "Getting Started (Bulk)"
 description: ""
 group: navigation
 ---
 {% include JB/setup %}
 
 The short tutorial below explains how to run __kallisto__ using a small example distributed with the program. 
+This tutorial covers how to use __kallisto__ for processing __bulk__ RNA sequencing data. If you want to process __single cell RNA sequencing__ data, see the [kallisto bus workflow](https://munfred.github.io/kallisto_bus_workflow/)
 
 
 #### Download and installation
