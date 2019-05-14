@@ -6,6 +6,7 @@ group: navigation
 
 {% include JB/setup %}
 
+TEST TEST
 __kallisto__ is a program for quantifying abundances of transcripts from bulk and single-cell RNA-Seq data, or more generally of target sequences using high-throughput sequencing reads. It is based on the novel idea of _pseudoalignment_ for rapidly determining the compatibility of reads with targets, without the need
 for alignment. On benchmarks with standard RNA-Seq data, __kallisto__ can
     quantify 30 million human reads in less than 3  minutes on a Mac desktop
