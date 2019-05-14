@@ -20,6 +20,7 @@ Scripts reproducing all the results of the paper are available [here](https://gi
 
 __kallisto__ quantified RNA-Seq can be analyzed with [__sleuth__](https://github.com/pachterlab/sleuth/).
 
+
 ## Manual
 
 Please visit http://pachterlab.github.io/kallisto/manual.html for the manual.
