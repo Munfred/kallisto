@@ -10,7 +10,7 @@ The short tutorial below explains how to run __kallisto__ using a small example 
 This tutorial covers how to use __kallisto__ for processing __bulk__ RNA sequencing data. If you want to process __single cell RNA sequencing__ data, see the [kallisto bus workflow](https://munfred.github.io/kallisto_bus_workflow/)
 
 
-#### Download and installation
+## Download and installation
 
 Begin by downloading and installing the program by following instructions on the [download page](https://pachterlab.github.io/kallisto/download). The files needed to confirm that __kallisto__ is working are included with the binaries downloadable from the [download page](https://pachterlab.github.io/kallisto/download).
 
@@ -34,7 +34,7 @@ Where <CMD> can be one of:
 Running kallisto <CMD> without arguments prints usage information for <CMD>
 ~~~
 
-#### Building an index
+## Building an index
 
 __kallisto__ quantifies read files directly without the need for read alignment, but it does perform a procedure called pseudoalignment. Pseudoalignment requires processing a transcriptome file to create a "transcriptome index". To begin, first change directories to where the test files distributed with the __kallisto__ executable are located:
 
@@ -45,7 +45,7 @@ Next, build an index type:
 `kallisto index -i transcripts.idx transcripts.fasta.gz`
 
 
-#### Quantification (single-cell RNA-Seq)
+## Single-cell RNA-Seq quantification 
 The analysis of single-cell RNA-Seq data involves a series of steps that include: (1) pre-processing of reads to associate them with their cells of origin, (2) possible collapsing of reads according to unique molecular identifiers (UMIs), (3) generation of feature counts from the reads to generate a feature-cell matrix and (4) analysis of the matrix to compare and contrast cells.
 
 Some of these challenges are procedurally straightforward but computationally demanding. Others are are statistical in nature and require technology specific models. We have recently introduced a format for single-cell RNA-seq data called the BUS (Barcode, UMI, Set) format that facilitates the development of modular workflows to address the complexities of these challenges. It is described in [P. Melsted, V. Ntranos and L. Pachter, "The Barcode, UMI, Set format and BUStools", bioRxiv 2018](https://www.biorxiv.org/content/early/2018/11/21/472571).
@@ -55,7 +55,7 @@ BUS files can be generated from single-cell RNA-seq data produced with any techn
 For detailed tutorials, see the 
 #### [kallisto bus workflow website](https://munfred.github.io/kallisto_bus_workflow/)
 
-#### Quantification (bulk)
+## Bulk RNA-seq quantification bulk
 
 Now you can quantify abundances of the transcripts using the two read files reads_1.fastq.gz and reads_2.fastq.gz (the .gz suffix means the read files have been gzipped; __kallisto__ can read in either plain-text or gzipped read files). To quantify abundances type:
 
