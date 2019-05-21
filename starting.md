@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Bulk"
+title: "Getting Started"
 description: ""
 group: navigation
 ---
@@ -44,7 +44,18 @@ Next, build an index type:
 
 `kallisto index -i transcripts.idx transcripts.fasta.gz`
 
-#### Quantification
+
+#### Quantification (single-cell RNA-Seq)
+The analysis of single-cell RNA-Seq data involves a series of steps that include: (1) pre-processing of reads to associate them with their cells of origin, (2) possible collapsing of reads according to unique molecular identifiers (UMIs), (3) generation of feature counts from the reads to generate a feature-cell matrix and (4) analysis of the matrix to compare and contrast cells.
+
+Some of these challenges are procedurally straightforward but computationally demanding. Others are are statistical in nature and require technology specific models. We have recently introduced a format for single-cell RNA-seq data called the BUS (Barcode, UMI, Set) format that facilitates the development of modular workflows to address the complexities of these challenges. It is described in [P. Melsted, V. Ntranos and L. Pachter, "The Barcode, UMI, Set format and BUStools", bioRxiv 2018](https://www.biorxiv.org/content/early/2018/11/21/472571).
+
+BUS files can be generated from single-cell RNA-seq data produced with any technology and can, in principle, be produced by any pseudoalignment software. We have implemented a command in __kallisto__ version [0.45.0](http://pachterlab.github.io/kallisto//releases/2018/11/17/v0.45.0) called "bus" that allows for the efficient generation of BUS format from any single-cell RNA-seq technology. Tools for manipulating BUS files are provided as part of the [__bustools__](https://bustools.github.io/) package. Finally, [R](https://github.com/BUStools/BUS_notebooks_R) and [python](https://github.com/BUStools/BUS_notebooks_python) notebooks for processing and analyzing BUS files simplify and facilitate the process of developing and optimizing analysis workflows.
+
+For detailed tutorials, see the 
+#### [kallisto bus workflow website](https://munfred.github.io/kallisto_bus_workflow/)
+
+#### Quantification (bulk)
 
 Now you can quantify abundances of the transcripts using the two read files reads_1.fastq.gz and reads_2.fastq.gz (the .gz suffix means the read files have been gzipped; __kallisto__ can read in either plain-text or gzipped read files). To quantify abundances type:
 
@@ -56,7 +67,7 @@ You can also call __kallisto__ with
 
 or with linux, you replace `gzcat` with `zcat` or any other program that writes the FASTQ to stdout. This utilizes an additional core to uncompress the FASTQ files, and speeds up the program by 10--15%.
 
-#### Single end reads
+#### Single end reads (bulk)
 
 If your reads are single end only you can run kallisto by specifying the `--single` flag,
 
@@ -64,7 +75,7 @@ If your reads are single end only you can run kallisto by specifying the `--sing
 
 however you must supply the length and standard deviation of the fragment length (not the read length).
 
-#### Results
+#### Results (bulk)
 
 The results of a __kallisto__ run are placed in the specified output directory (the -o option), and therefore the test results should be located in the subdirectory "output". The contents of the directory should look like this:
 
