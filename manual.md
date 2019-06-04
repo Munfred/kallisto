@@ -47,7 +47,8 @@ Optional argument:
     --make-unique           Replace repeated target names with unique names
 ~~~
 
-The Fasta file supplied can be either in plaintext or gzipped format. Prebuilt indices constructed from [Ensembl reference transcriptomes](https://uswest.ensembl.org/info/data/ftp/index.html) can be download from the [kallisto transcriptome indices](https://github.com/pachterlab/kallisto-transcriptome-indices/releases) site.
+The Fasta file supplied can be either in plaintext or gzipped format. Prebuilt indices constructed from [Ensembl reference transcriptomes](https://uswest.ensembl.org/info/data/ftp/index.html) can be download from the [kallisto transcriptome indices](https://github.com/pachterlab/kallisto-transcriptome-indices/releases) site. Building indices with __kallisto index__ will often be faster in practice than downloading index files. For example, the __kallisto__ index for the human transcriptome takes between 5--10 minutes to build on a standard desktop or laptop. Transcriptome fasta files for model organisms can be downloaded from the [Ensembl database](https://www.ensembl.org/info/data/ftp/index.html). We recommend using cDNA fasta, specifically the *.cdna.all.fa.gz files. __kallisto__ can build indices directly from gzipped files.
+
 
 #### quant
 
